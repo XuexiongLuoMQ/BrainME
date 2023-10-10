@@ -133,27 +133,6 @@ def meta_train_maml(args, maml, lossfn, opt, tasks):
     with open('meta_train_loss.pkl', 'wb') as f:
         pkl.dump(losses, f)
 
-# def gcl_loss_f(graph_emb, ori_emb):
-#     """
-#     Args:
-#         graph_emb: (B,d)
-#         ori_emb: (B,d)
-#     """
-#     def _cycle_index(num, shift):
-#         arr = torch.arange(num) + shift
-#         arr[-shift:] = torch.arange(shift)
-#         return arr
-#     def _loss(input, target):
-#         return F.binary_cross_entropy_with_logits(input, target)
-    
-#     neg_graph_emb = graph_emb[_cycle_index(len(ori_emb), 1)]   # (#num_graph, dim)
-#     # task_emb = torch.cat(([_pool(ns_e) for ns_e in nodes_emb]), dim=0) 
-#     graph_pos_score = torch.sum(graph_emb*ori_emb, dim=1)
-#     graph_neg_score = torch.sum(graph_emb*neg_graph_emb, dim=1)
-#     loss = _loss(graph_pos_score, torch.ones_like(graph_pos_score)) + \
-#         _loss(graph_neg_score, torch.zeros_like(graph_neg_score))
-#     return loss
-
 class Discriminator(torch.nn.Module):
     def __init__(self, args):
         super(Discriminator, self).__init__()
