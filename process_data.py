@@ -118,22 +118,6 @@ class BatchDataset(Dataset):
     def __getitem__(self, index):
         return self.x[index], self.y[index]
 
-
-# def split_sup_que(data_tuple):
-#     data, labels = data_tuple
-#     # import pdb; pdb.set_trace()
-#     inds = list(range(len(data)))
-#     random.shuffle(inds)
-#     sup_num = round(len(data)*2/3)
-#     sup_set_x, sup_set_y = data[inds[:sup_num]], labels[inds[:sup_num]]
-#     que_set_x, que_set_y = data[inds[sup_num:]], labels[inds[sup_num:]]
-
-#     sup_set = BatchDataset(sup_set_x, sup_set_y)
-#     que_set = BatchDataset(que_set_x, que_set_y)
-
-#     print('support size', len(sup_set), 'query size', len(que_set))
-#     return sup_set, que_set
-
 def split_sup_que(data):
     n = len(data)
     inds = list(range(n))
