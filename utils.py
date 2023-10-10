@@ -7,7 +7,6 @@ import torchmetrics
 from sklearn import metrics
 from torch_geometric.data import Data
 
-
 def seed_everything(seed):
     random.seed(seed)
     np.random.seed(seed)
@@ -15,7 +14,6 @@ def seed_everything(seed):
 
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
-
 
 def node_score_batch(emb, k_near=4):
     """
@@ -72,13 +70,6 @@ def entropy_node_score(emb, adj, alpha=1.):
 
     return s
 
-
-
-
-
-
-
-
 def pairwise_distances(x):
     #x should be two dimensional
     instances_norm = torch.sum(x**2,-1).reshape((-1,1))
@@ -124,8 +115,6 @@ def calculate_MI(x,y,s_x,s_y):
     Ixy = Hx+Hy-Hxy
     
     return Ixy
-
-
 
 def gib_loss(positive, embeddings):
     # calculate to sigma1 and sigma2
