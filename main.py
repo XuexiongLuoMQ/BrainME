@@ -70,7 +70,6 @@ def eval(model, loader, args):
         # if torch.isnan(c).any():
         #     import pdb; pdb.set_trace()
         c = torch.softmax(c,dim=1)
-        #print(c,'33333333333')
         pred = c.max(dim=1)[1]
         preds += pred.detach().cpu().tolist()
         preds_prob += c[:, 1].detach().cpu().tolist()
