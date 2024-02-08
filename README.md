@@ -1,5 +1,5 @@
-# BrainME
-Brain Graph Meta-Explainer via Cross-Domain Meta-Learning for Brain Disorder Analysis
+# BrainEx
+Brain Graph Explainer via Cross-Domain Meta-Learning for Brain Disorder Analysis
 
 ## Run
 To perform our model, firstly pre-training:
