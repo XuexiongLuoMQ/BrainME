@@ -1,5 +1,5 @@
-# BrainEx
-Brain Graph Explainer via Cross-Domain Meta-Learning for Brain Disorder Analysis
+# BraSub
+Brain Subgraph Extraction for Disorder Analysis via Cross-Domain Brain Graph Learning
 
 ## Run
 To perform our model, firstly pre-training:
