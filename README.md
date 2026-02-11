@@ -1,5 +1,5 @@
 # BraSub
-Brain Subgraph Extraction for Disorder Analysis via Cross-Domain Brain Graph Learning
+Extract and Refine Brain Subgraph for Disorder Analysis via Cross-Domain Learning
 
 ## Run
 To perform our model, firstly pre-training:
